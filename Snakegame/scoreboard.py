@@ -6,6 +6,29 @@ with open(file='high_score.txt') as f:
 class Score(Turtle):
     def __init__(self):
         super().__init__()
+
+        tim = Turtle()
+        tim.up()
+        tim.goto(-350, -350)
+        tim.down()
+        tim.begin_fill()
+        for _ in range(2):
+            tim.forward(700)
+            tim.left(90)
+            tim.forward(700)
+            tim.left(90)
+        tim.end_fill()
+        tim.color('yellow')
+        tim.up()
+        tim.goto(-350, 310)
+        tim.down()
+        for i in range(35):
+            tim.fd(10)
+            tim.up()
+            tim.fd(10)
+            tim.down()
+        tim.hideturtle()
+
         self.score = 0
         self.high_score = int(HIGH_SCORE)
         self.color('yellow')
@@ -13,17 +36,6 @@ class Score(Turtle):
         self.goto(0, 320)
         self.write(f"Score: {self.score} High Score: {self.high_score}", align="center", font=("Comic Sans MS", 15,
                                                                                                "bold"))
-        tim = Turtle()
-        tim.color('yellow')
-        tim.up()
-        tim.goto(-350, 310)
-        tim.down()
-        for i in range(100):
-            tim.fd(10)
-            tim.up()
-            tim.fd(10)
-            tim.down()
-        tim.hideturtle()
         self.hideturtle()
 
     def update_score(self):
