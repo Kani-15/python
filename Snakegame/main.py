@@ -5,14 +5,14 @@ from food import Food
 from scoreboard import Score
 screen = t.Screen()
 screen.setup(700, 700)
-screen.bgcolor("black")
+screen.bgcolor("white")
 screen.title("Snake Game")
 screen.tracer(0)
 
 snake = Snake()
 food = Food()
 score = Score()
-t.color('red')
+t.color('black')
 t.hideturtle()
 
 game = True
